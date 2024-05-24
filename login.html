@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main1" style="min-width: 200px;">
+        <h1>LogIn Page</h1>
+        <span>Email : </span>
+        <label><input type="email" name="" id="userEmail" placeholder="Enter your email"></label>
+        <span>Password : </span>
+        <label><input type="password" name="" id="userPassword" placeholder="Enter your password"></label>
+        <button onclick="logIn()" class="l_btn">Log In</button>
+    </div>
+
+    <script>
+
+        var yEmail = document.getElementById('userEmail')
+        console.log(yEmail);
+        var yPassword = document.getElementById('userPassword')
+        console.log(yPassword);
+         function logIn() {
+            let lEmail = localStorage.getItem('email');
+            console.log(lEmail);
+            let lPassword = localStorage.getItem('password');
+            console.log(lPassword);
+
+            if (yEmail.value == "" || yPassword.value == "") {
+                alert('please Enter Your Text')
+            }
+            else if (yEmail.value === lEmail & yPassword.value === lPassword) {
+                // alert('Done')
+                window.location.href = 'data.html'
+            }
+            else {
+                alert('Your information is dont match please write currect  email and pasword')
+
+            }
+        }
+        // // console.log(logIn());
+        // // console.log('pppp');
+
+
+    </script>
+
+
+</body>
+
+</html>

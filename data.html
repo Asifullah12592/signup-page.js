@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main2" style="min-width: 200px;">
+
+        <h1 style="border-bottom:3px solid black ; background-color: rgba(0, 0, 0, 0.637); border-radius: 10px;opacity: 100%">Data Page</h1>
+        <h1>Wellcom Mr : <br></h1>
+        <span id="getName" ></span>
+    </div>
+        
+        <script>
+        var gValue = localStorage.getItem('userName')
+        var getValue = document.getElementById('getName')
+        getValue.textContent=gValue
+        
+    </script>
+</body>
+</html>
